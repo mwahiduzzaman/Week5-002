@@ -29,13 +29,13 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const morgan_1 = __importDefault(require("morgan"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const index_1 = __importDefault(require("../routes/index"));
-const contact_1 = __importDefault(require("../routes/business_contact/contact"));
+const contact_1 = __importDefault(require("../routes/contact"));
 const DBConfig = __importStar(require("./db"));
 mongoose_1.default.connect(DBConfig.LocalURI);
 const db = mongoose_1.default.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function () {
-    console.log("connected to MongoDB at" + DBConfig.HostName);
+    console.log('connected to MongoDB at:' + DBConfig.HostName);
 });
 const app = (0, express_1.default)();
 app.set('views', path_1.default.join(__dirname, '../views'));

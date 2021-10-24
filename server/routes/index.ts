@@ -7,7 +7,7 @@ router.get('/', DisplayHomePage);
 
 router.get('/about', DisplayAboutPage);
 
-router.get('/projects', DisplayProjectsPage );
+router.get('/projects', DisplayProjectsPage);
 
 router.get('/services', DisplayServicesPage);
 
